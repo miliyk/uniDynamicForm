@@ -97,9 +97,9 @@
 | number | String | number | number数字 / integer整数 / decimal小数 / negative-integer负整数 / negative-decimal负小数  |
 ---
 
-## 一、使用示例
+## 三、使用示例
 
-### 1.1 页面引入
+### 页面引入
 
 ```vue
 <dynamic-form ref="dynamicFormRef" :form-items="formItems" :show-submit="true" @submit="handleSubmit">
@@ -116,7 +116,7 @@
 </dynamic-form>
 ```
 
-### 1.2 完整 formItems 配置
+### 完整 `formItems` 配置
 
 ```javascript
 formItems: [
