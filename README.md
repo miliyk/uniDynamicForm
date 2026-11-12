@@ -25,36 +25,35 @@
 |------|------|------|------|
 | fieldLabel | String | 是 | 表单项标签 |
 | fieldKey | String | 是 | 表单字段名（唯一标识） |
-| componentType | String | 是 | 组件类型，见下图 |
-| required | Boolean | 否 | 是否必填，默认 false |
-| placeholder | String | 否 | 占位提示文字 |
 | fieldValue | any | 是 | 初始值 |
-| explain | String | 否 | 说明文字 |
-| labelPosition | String | 否 | 标签位置：top上下（默认） / left左右 |
-| labelWidth | String / Number | 否 | 标签宽度，仅 left 时生效，数字按 rpx，默认 '160rpx' |
-| clearable | Boolean | 否 | 是否可清除（text / number / textarea） |
-| disabled | Boolean | 否 | 是否禁用（text / number / textarea） |
-| readonly | Boolean | 否 | 是否只读（text / number / textarea） |
-| maxLength | Number | 否 | 最大长度（text / number / textarea） |
-| minNumber | Number | 否 | 最小值（number） |
-| maxNumber | Number | 否 | 最大值（number） |
-| displayMode | String | 否 | 数值类型（number，取 NUMBER_TYPE 枚举值） |
-| precision | Number | 否 | 小数位数（number） |
-| prefix | String | 否 | 前置文本（number） |
-| suffix | String | 否 | 后置文本（number） |
-| options | Array | 否 | 选项列表（checkbox / picker） |
-| autoHeight | Boolean | 否 | 自动增高（textarea） |
-| showWordCount | Boolean | 否 | 显示字数统计（text / textarea） |
-| dateFormat | String | 否 | 日期格式（date） |
-| startDate | String | 否 | 日期范围起始（date） |
-| endDate | String | 否 | 日期范围结束（date） |
-| displayMode | String | 否 | 展示模式（number/date/boolean/upload） |
-| maxCount | Number | 否 | 最大上传数量（upload，默认 9） |
-| maxSize | Number | 否 | 单个文件最大大小 MB（upload，默认 10） |
-| accept | String | 否 | 允许的文件类型：image / video / all（upload，默认 image） |
-| multiple | Boolean | 否 | 是否允许多选（upload，默认 true） |
-| showUploadTips | Boolean | 否 | 是否显示提示信息（upload，默认 true） |
-| bodyPositionRight | Boolean | 否 | body 区域是否居右对齐（所有类型，默认 false） |
+| componentType | String | 是 | 组件类型，见下图 |
+| required | Boolean |  | 是否必填，默认 false |
+| placeholder | String |  | 占位提示文字 |
+| explain | String |  | 说明文字 |
+| bodyPositionRight | Boolean |  | body 区域是否居右对齐，默认 false |
+| labelPosition | String |  | 标签位置：top上下（默认） / left左右 |
+| labelWidth | String / Number |  | 标签宽度，仅 left 时生效，数字按 rpx，默认 '160rpx' |
+| clearable | Boolean |  | 是否可清除（text / number / textarea） |
+| disabled | Boolean |  | 是否禁用（text / number / textarea） |
+| readonly | Boolean |  | 是否只读（text / number / textarea） |
+| maxLength | Number |  | 最大长度（text / number / textarea） |
+| minNumber | Number |  | 最小值（number） |
+| maxNumber | Number |  | 最大值（number） |
+| precision | Number |  | 小数位数（number） |
+| prefix | String |  | 前置文本（number） |
+| suffix | String |  | 后置文本（number） |
+| options | Array |  | 选项列表（checkbox / picker） |
+| autoHeight | Boolean |  | 自动增高（textarea） |
+| showWordCount | Boolean |  | 显示字数统计（text / textarea） |
+| dateFormat | String |  | 日期格式（date） |
+| startDate | String |  | 日期范围起始（date） |
+| endDate | String |  | 日期范围结束（date） |
+| displayMode | String |  | 展示模式，见下图（number / date / boolean / upload） |
+| maxCount | Number |  | 最大上传数量，默认 9（upload） |
+| maxSize | Number |  | 单个文件最大大小，默认 10MB（upload） |
+| accept | String |  | 允许的文件类型：image（默认） / video / all（upload） |
+| multiple | Boolean |  | 是否允许多选，默认 true（upload） |
+| showUploadTips | Boolean |  | 是否显示提示信息，默认 true（upload） |
 
 ---
 
