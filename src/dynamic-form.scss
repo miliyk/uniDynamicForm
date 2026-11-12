@@ -1,0 +1,148 @@
+/**
+ * 动态表单公用样式变量与混入
+ *
+ * 使用方式：
+ *   1. 在子组件的 <style lang="scss"> 中 @import 本文件（HBuilderX 会自动识别相对路径）
+ *   2. 通过变量引用颜色、尺寸等常量，保证视觉统一
+ *   3. 通过 @include 混入复用字段框 / 禁用态 / 只读态 / placeholder 等通用样式
+ */
+
+/* ============================================================
+ * 颜色
+ * ========================================================== */
+
+/* 字段背景 */
+$df-field-bg: #F2F3F5;
+$df-field-bg-disabled: #f5f5f5;
+
+/* 字段文字 */
+$df-field-color: #333333;
+$df-field-color-disabled: #c0c4cc;
+$df-field-color-readonly: #606266;
+$df-field-color-placeholder: #c8c9cc;
+
+/* 清除按钮 */
+$df-clear-bg: #c0c4cc;
+$df-clear-color: #ffffff;
+
+/* 字数统计 */
+$df-count-color: #999999;
+
+/* 前置/后置文本 */
+$df-adorn-color: #666666;
+
+/* 主色（选中态） */
+$df-primary-color: #1890ff;
+
+/* ============================================================
+ * 尺寸
+ * ========================================================== */
+
+/* 字段框 */
+$df-field-height: 60rpx;
+$df-field-padding-x: 20rpx;
+$df-field-radius: 4rpx;
+$df-field-font-size: 26rpx;
+
+/* 清除按钮 */
+$df-clear-size: 32rpx;
+$df-clear-font-size: 20rpx;
+
+/* 字数统计 */
+$df-count-font-size: 22rpx;
+$df-count-offset: -30rpx;
+
+/* 前置/后置文本 */
+$df-adorn-gap: 12rpx;
+
+/* ============================================================
+ * 混入
+ * ========================================================== */
+
+/**
+ * 字段基础样式（input / textarea / picker 触发器共用）
+ * 使用示例：
+ *   .input-text__field {
+ *     @include df-field-base;
+ *   }
+ *   .input-textarea__field {
+ *     @include df-field-base($min-height: 120rpx, $padding-y: 16rpx);
+ *   }
+ */
+@mixin df-field-base($min-height: null, $padding-y: 0) {
+    width: 100%;
+    height: $df-field-height;
+    @if $min-height != null {
+        min-height: $min-height;
+        height: auto;
+    }
+    padding: $padding-y $df-field-padding-x;
+    background-color: $df-field-bg;
+    border-radius: $df-field-radius;
+    font-size: $df-field-font-size;
+    color: $df-field-color;
+    box-sizing: border-box;
+}
+
+/**
+ * 字段禁用态
+ * 使用示例：
+ *   .input-text__field--disabled {
+ *     @include df-field-disabled;
+ *   }
+ */
+@mixin df-field-disabled {
+    color: $df-field-color-disabled;
+    cursor: not-allowed;
+}
+
+/**
+ * 字段只读态
+ * 使用示例：
+ *   .input-text__field--readonly {
+ *     @include df-field-readonly;
+ *   }
+ */
+@mixin df-field-readonly {
+    background-color: $df-field-bg-disabled;
+    color: $df-field-color-readonly;
+}
+
+/**
+ * 清除按钮（圆形图标 + 内部文字）
+ * 使用示例：
+ *   .clearable {
+ *     @include df-clear-btn;
+ *   }
+ */
+@mixin df-clear-btn {
+    position: absolute;
+    width: $df-clear-size;
+    height: $df-clear-size;
+    background-color: $df-clear-bg;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/**
+ * 清除按钮内文字（×）
+ */
+@mixin df-clear-text {
+    font-size: $df-clear-font-size;
+    color: $df-clear-color;
+    line-height: 1;
+}
+
+/**
+ * 字段 placeholder 颜色
+ * 使用示例：
+ *   .text__field::placeholder {
+ *     @include df-field-placeholder;
+ *   }
+ */
+@mixin df-field-placeholder {
+    color: $df-field-color-placeholder;
+}

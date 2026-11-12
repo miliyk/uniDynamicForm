@@ -1,0 +1,28 @@
+{
+  "name": "@kext/dynamicform",
+  "version": "1.0.0",
+  "description": "一个基于 Vue2 + uni-app 的移动端动态表单组件库，通过配置驱动渲染各类表单控件。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "index.js",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "uni-app",
+    "vue2",
+    "dynamic-form",
+    "form",
+    "mobile",
+    "动态表单"
+  ],
+  "author": "mly",
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": "^2.6.0"
+  }
+}
